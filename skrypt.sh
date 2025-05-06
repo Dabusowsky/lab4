@@ -1,9 +1,7 @@
 #!/bin/bash
-if [ "$1" == "--logs" ]; then
-  count=${2:-100}
-  for ((x=1; x<=$count; x++)); do
-    echo "Nazwa pliku: log$x.txt" > log$x.txt
-    echo "Nazwa skryptu: skrypt.sh" >> log$x.txt
-    echo "Data utworzenia: $(date)" >> log$x.txt
-  done
+if [ "$1" == "--help" ]; then
+  echo "Dostępne opcje:"
+  echo "--date - wyświetla dzisiejszą datę"
+  echo "--logs [liczba] - tworzy pliki log (domyślnie 100)"
+  echo "--help - wyświetla tę pomoc"
 fi
